@@ -7,6 +7,6 @@ import csv
 import sys
 
 reader = csv.reader(open(sys.argv[1]), dialect='excel-tab')
-writer = csv.writer(open('geonames-geoplanet-matches.tsv', 'w'))
+writer = csv.writer(open('geonames-geoplanet-matches.csv', 'w'))
 for row in reader:
   writer.writerow([row[5], row[0], row[6], row[2], row[3]])
